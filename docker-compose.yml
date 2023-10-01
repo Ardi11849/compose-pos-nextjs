@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  app:
+    container_name: pos-app
+    image: digylabs/pos-nextjs:latest
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3000:3000"
+    networks:
+      - digylabs-pos-app
+
+#Docker Networks
+networks:
+  digylabs-pos-app:
+
+
+
